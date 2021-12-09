@@ -15,8 +15,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
-      runs-on: ubuntu-latest
+      run: docker build . --file Dockerfile --tag mydock
       
       
   push_to_registry:
@@ -28,8 +27,8 @@ jobs:
       - name: Push to Docker Hub
         uses: docker/build-push-action@v1
         with:
-          username: dckvm
-          password: nahed1?23
-          repository: PROJET       
+          username: dockersvm
+          password: nahedsifi789
+          repository: dockersvm/projet_cloud       
           tag_with_ref: true
       
